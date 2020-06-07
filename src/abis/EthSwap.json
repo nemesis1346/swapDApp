@@ -4067,15 +4067,47 @@
           ],
           "name": "TokensPurchased",
           "type": "event"
+        },
+        "0x697c42d55a5e1fed3f464ec6f38b32546a0bd368dc8068b065c67566d73f3290": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "account",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "internalType": "uint256",
+              "name": "rate",
+              "type": "uint256"
+            }
+          ],
+          "name": "TokensSold",
+          "type": "event"
         }
       },
       "links": {},
-      "address": "0x75326d55C9Aa585101b79C1d3A363c665eB310Df",
-      "transactionHash": "0xd5240ba57f6e21dcd4e6efc0cbac8186a442ca4dd4d1bf64e51b70ea42779a81"
+      "address": "0x1830Cf15BB1c6db49165B8Ab6bC02dd1CdFB02F5",
+      "transactionHash": "0xffb917c19a5c4d9b43e6a3d5a9426483cbc4185693077be27396d5eef9678dbe"
     }
   },
   "schemaVersion": "3.0.23",
-  "updatedAt": "2020-06-07T19:09:36.773Z",
+  "updatedAt": "2020-06-07T19:22:12.347Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },
