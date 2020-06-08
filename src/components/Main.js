@@ -39,7 +39,7 @@ class Main extends Component {
                     >
                         Buy
               </button>
-                    <span className="text-muted"></span>
+                    <span className="text-muted">&lt; &nbsp; &gt;</span>
                     <button
                         className="btn btn-light"
                         onClick={(event) => {
