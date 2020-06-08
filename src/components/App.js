@@ -38,8 +38,9 @@ class App extends Component {
     console.log('USERS BALANCE')
     console.log(ethBalance)
 
-    // Load Token
+    //get Network Id
     const networkId = await web3.eth.net.getId()
+    // Load Token
     const tokenData = Token.networks[networkId]
     if (tokenData) {
       const token = new web3.eth.Contract(Token.abi, tokenData.address)
@@ -74,6 +75,16 @@ class App extends Component {
       window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
     }
   }
+  buyTokens = (etherAmount) => {
+    this.setState({ loading: true })
+    this.state.ethSwap.methods.buyTokens()
+      .send({ value: etherAmount, from: this.state.account })
+      .on('transactionHash', (hash) => {
+        console.log('ON TRANSACTION HASH')
+        console.log(hash)
+        this.setState({ loading: false })
+      })
+  }
   render() {
     let content
     if (this.state.loading) {
@@ -91,9 +102,9 @@ class App extends Component {
 
         <div className="container-fluid mt-5">
           <div className="row">
-            <main role="main" className="col-lg-12 d-flex text-center">
+            <main role="main" className="col-lg-12 ml-auto mr-auto" style={{ maxWidth: '600px' }}>
               <div className="content mr-auto ml-auto">
-            
+
                 {content}
 
               </div>
